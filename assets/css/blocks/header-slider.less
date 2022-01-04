@@ -1,0 +1,168 @@
+// main: ../main.css
+
+.header {
+  // height:1;
+  width: 100vw;
+  &__slider {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    // width: 100%;
+  }
+  & .slick-list.draggable {
+    padding: 0;
+    overflow: hidden;
+
+    height: 100%;
+  }
+  & .slick-vertical .slick-slide {
+    height: 100vh;
+  }
+  & .slick-track {
+    display: block;
+    height: 100%;
+  }
+}
+
+.slider__item {
+  position: relative;
+  height: 100vh;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0 0 0 / 31%);
+  }
+  & .container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .offer {
+    position: relative;
+    z-index: 11;
+    &__title {
+      font-family: "Octin College Free", sans-serif;
+      font-size: 65px;
+      line-height: 1.4;
+      @media (max-width: 1500px) {
+        font-size: calc(30px + (65 - 30) * ((100vw - 320px) / (1500 - 320)));
+      }
+      text-transform: uppercase;
+      color: @color-4;
+      margin-bottom: 30px;
+      & span {
+        font-family: "Montserrat";
+        display: block;
+        color: @color-2;
+        font-size: 65px;
+        @media (max-width: 1500px) {
+          font-size: calc(30px + (65 - 30) * ((100vw - 320px) / (1500 - 320)));
+        }
+      }
+    }
+    &__subtitle {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.offer-btn {
+  position: relative;
+  padding: 1em 2em 1em 0.1em;
+  max-width: 180px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23%;
+    right: 18%;
+    background: url(../img/icon/arrow-right.svg);
+    width: 30px;
+    height: 30px;
+    transition: all 0.6s ease;
+  }
+  &:hover::after {
+    right: 10%;
+  }
+}
+
+.slider__btn-prev {
+  position: absolute;
+  z-index: 20;
+  right: 2%;
+  top: 47vh;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slider__btn-next {
+  position: absolute;
+  z-index: 20;
+  right: 26.3%;
+  top: 36vh;
+  transition: all 0.4s ease;
+  &:hover {
+    filter: brightness(2);
+  }
+}
+
+.slider__count {
+  position: absolute;
+  z-index: 19;
+  right: 18.4%;
+  top: 40vh;
+  font-size: 25px;
+  font-weight: 700;
+  color: @color-4;
+  &::before {
+    content: "0/";
+    position: absolute;
+    top: 0;
+    left: -31px;
+    color: @color-2;
+  }
+}
+
+.slider__count_response {
+  display: none;
+}
+
+.slick-next.slick-arrow {
+  position: absolute;
+  font-size: 0;
+  z-index: 20;
+  right: 18.4%;
+  top: 33%;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon/bullit-up.png);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slick-prev.slick-arrow {
+  font-size: 0;
+  position: absolute;
+  z-index: 20;
+  right: 18.4%;
+  top: 47vh;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon/bullit-down.png);
+  &:hover {
+    opacity: 1;
+  }
+}

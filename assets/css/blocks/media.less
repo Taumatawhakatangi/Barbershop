@@ -1,0 +1,388 @@
+// main: ../main.css
+
+@media (max-width: 1800px) {
+  .slick-next.slick-arrow {
+    right: 10%;
+  }
+  .slick-prev.slick-arrow {
+    right: 10%;
+  }
+  .slider__count {
+    right: 10%;
+  }
+}
+
+@media (max-width: 1360px) {
+  .team .slider__btn-next {
+    right: 40%;
+    top: initial;
+    bottom: -15%;
+  }
+  .team .slider__btn-prev {
+    left: 40%;
+    top: initial;
+    bottom: -15%;
+  }
+  .review__item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+  .review__img {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .review {
+    &.slick-initialized .slick-slide {
+      display: block;
+    }
+    &__text {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .review__about {
+    text-align: center;
+    max-width: 100%;
+  }
+  .review .slider__btn-next {
+    right: 28%;
+    top: 60%;
+  }
+  .review .slider__btn-prev {
+    left: 28%;
+    top: 60%;
+  }
+}
+
+@media (max-width: 1233px) {
+  .menu-wrapper {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+  .menu li + li {
+    margin-left: 10px;
+  }
+  .slider__item .offer__title {
+    max-width: 800px;
+  }
+  .feature {
+    justify-content: space-around;
+  }
+  .review .slider__btn-next {
+    right: 20%;
+    top: 60%;
+  }
+  .review .slider__btn-prev {
+    left: 20%;
+    top: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+  .menu {
+    display: none;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: -25px;
+    left: 0;
+    height: 100vh;
+    padding-top: 100px;
+    z-index: 100;
+
+    overflow: auto;
+  }
+  div.menu__item {
+    display: none;
+  }
+  .burger {
+    display: block;
+    z-index: 200;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .menu-wrapper .logo {
+    position: relative;
+    z-index: 200;
+  }
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li + li {
+    margin: 0;
+  }
+  .menu__item {
+    width: 100%;
+    text-align: center;
+    &_tel {
+      display: block;
+    }
+    &_btn {
+      display: block;
+    }
+  }
+  .slider__count {
+    display: none;
+    right: 46%;
+    top: 21%;
+  }
+  .slider__count_response {
+    position: absolute;
+    display: block;
+    right: 43%;
+    top: 95px;
+  }
+  .slider__item .offer__title {
+    width: 100%;
+    text-align: center;
+  }
+  .slider__item .offer__subtitle {
+    text-align: center;
+  }
+  .slider__item .container {
+    max-height: 100vh;
+    display: block;
+    padding: 200px 0;
+  }
+  .offer-btn {
+    margin: 0 auto;
+  }
+  .feature__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 21;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: url(/assets/img/icon/click-hand-w.png) no-repeat center center;
+    opacity: 1;
+  }
+  .feature__item:hover::before {
+    opacity: 0;
+  }
+  .gallery {
+    justify-content: space-around;
+  }
+  .review .slider__btn-next {
+    right: 15%;
+    top: 60%;
+  }
+  .review .slider__btn-prev {
+    left: 15%;
+    top: 60%;
+  }
+  .footer .logo img {
+    width: 128px;
+  }
+  .social {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .footer-form__title {
+    text-align: center;
+  }
+  .footer-form {
+    width: 100%;
+  }
+  .footer .logo {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 548px;
+  }
+  .menu-wrapper {
+    justify-content: space-between;
+  }
+  .slider__item .offer {
+    overflow: visible;
+  }
+  .team .slider__btn-next {
+    right: 30%;
+    top: initial;
+    bottom: -15%;
+  }
+  .team .slider__btn-prev {
+    left: 30%;
+    top: initial;
+    bottom: -15%;
+  }
+  .services__btns {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    flex-direction: column;
+    background: #000;
+    border: 1px solid @color-2;
+    .services__btn {
+      border: none;
+    }
+  }
+  .services__btn.active::before {
+    border: 0;
+    background: none;
+  }
+  .openTabBtn {
+    display: block;
+  }
+  .services__img {
+    display: block;
+  }
+  .services__work-time {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    & span {
+      margin-top: 20px;
+    }
+  }
+  .services__order {
+    flex-wrap: wrap;
+  }
+  .workTime.btn {
+    margin: 0 auto;
+  }
+  .services__row {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  .services__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .services__price {
+    width: 100%;
+    text-align: center;
+  }
+  .openTabBtn.btn {
+    display: block;
+  }
+  .review .slick-slide img {
+    min-width: 170px;
+  }
+  .review__img {
+    position: relative;
+    width: 100%;
+    max-height: 350px;
+    z-index: 19;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      bottom: 0;
+      background: url(../img/icon/bullit-up.png) no-repeat;
+      transform: rotate(90deg);
+      z-index: 30;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      bottom: 0;
+      background: url(../img/icon/bullit-down.png) no-repeat;
+      transform: rotate(90deg);
+      z-index: 30;
+    }
+  }
+  .review .slider__btn-next {
+    display: none;
+  }
+  .review .slider__btn-prev {
+    display: none;
+  }
+  .address__item {
+    width: 100%;
+    &:not(:last-of-type) {
+      margin-bottom: 120px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+    padding: 0 15px;
+  }
+  .order-btn {
+    display: none;
+  }
+  .order-btn__respons {
+    display: block;
+  }
+  .logo img {
+    width: 70px;
+  }
+  .offer-btn {
+    max-width: 100%;
+  }
+  .team__item.slick-slide {
+    margin-right: 0;
+  }
+
+  .team__item.slick-list.draggable {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 90%;
+    padding: 0 15px;
+  }
+  .slick-initialized .slick-slide {
+    display: block;
+  }
+  .team__item.slick-slide {
+    overflow: visible;
+  }
+  .slick-list.draggable {
+    padding-left: 0;
+  }
+  .team__img {
+    margin: 0 auto 40px auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 90%;
+    padding: 0 15px;
+  }
+  .feature__description {
+    width: 100%;
+    left: 0;
+  }
+  .review .slick-list.draggable {
+    padding-left: 0;
+  }
+  .review__item {
+    margin-right: 0;
+  }
+}

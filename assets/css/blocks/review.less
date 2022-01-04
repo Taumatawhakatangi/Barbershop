@@ -1,0 +1,71 @@
+// main: ../main.css
+
+.s-review {
+  padding: 100px 0 200px;
+  @media (max-width: 1200px) {
+    padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+    padding-bottom: calc(
+      100px + (200 - 100) * ((100vw - 320px) / (1200 - 320))
+    );
+  }
+  //   background-color: @color-2;
+  background: url(../img/section-bg.jpg) no-repeat center top / cover;
+  & .section-title {
+    color: @color-2;
+  }
+}
+.review {
+  display: block;
+  position: relative;
+  color: @color-1;
+  &__img {
+    width: 40%;
+    max-width: 340px;
+    max-height: 400px;
+    overflow: hidden;
+    margin-right: 100px;
+  }
+  &__item {
+    color: @color-2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 70px;
+  }
+  &__name {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    width: 60%;
+    max-width: 900px;
+    text-align: center;
+  }
+  &__about {
+    max-width: 900px;
+    font-size: 20px;
+  }
+  & .slider__btn-prev {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 32%;
+    top: 50%;
+    z-index: 11;
+  }
+  & .slider__btn-next {
+    transform: rotate(90deg);
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    z-index: 11;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  & .slick-list.draggable {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,170 @@
+// main: ../main.css
+
+.s-services {
+  position: relative;
+  padding: 100px 0 200px;
+  @media (max-width: 1200px) {
+    padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+    padding-bottom: calc(
+      100px + (200 - 100) * ((100vw - 320px) / (1200 - 320))
+    );
+  }
+  background-color: #000;
+  background: url(../img/services/services-6.jpg) no-repeat center top / cover;
+  background-attachment: fixed;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.41);
+    display: block;
+    z-index: 10;
+  }
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: -75px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 50px;
+  //   box-shadow: 0 61px 15px #000000;
+  //   z-index: 11;
+  // }
+}
+
+.services {
+  position: relative;
+  z-index: 11;
+  margin: 0 auto;
+  max-width: 1000px;
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & :not(:last-of-type) {
+      border-right: none;
+    }
+  }
+  &__btn {
+    background: @color-3;
+    position: relative;
+    font-size: 20px;
+    color: @color-2;
+    border: 1px solid @color-2;
+    padding: 14px 20px;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    white-space: nowrap;
+    text-shadow: 0;
+    &.active {
+      border-top: none;
+      border-radius: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -25%;
+        width: 100%;
+        height: 10px;
+        display: block;
+        border-radius: 5px 5px 0px 0px;
+        border: 1px solid @color-2;
+        border-bottom: none;
+        border-top: 4px solid @color-4;
+        background: @color-3;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        bottom: -2px;
+        width: 101%;
+        height: 10px;
+        display: block;
+      }
+    }
+  }
+  &__content {
+    font-size: 18px;
+    display: none;
+    min-height: 300px;
+  }
+  &__contents {
+    position: relative;
+    z-index: 11;
+    background: @color-3;
+    max-width: 1000px;
+    border: 1px solid @color-2;
+    padding: 40px 40px;
+  }
+  &__order {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.workTime.btn {
+  border-radius: 0;
+}
+
+.services {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed @color-7;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.jsTabContent.active {
+  display: block;
+}
+
+.openTabBtn.btn.active {
+  display: block;
+}
+
+.services__btns.respons {
+  display: flex;
+}
+
+.openTabBtn.btn {
+  position: relative;
+  z-index: 29;
+  display: none;
+  margin: 0 auto;
+  border-radius: 0;
+  border: 1px solid #fff;
+  border-bottom: none;
+  background: #000;
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    background: url(../img/icon/click-hand-w-sm.png) no-repeat center center;
+    z-index: 30;
+  }
+}
+
+.services__img {
+  display: none;
+  pointer-events: none;
+  pointer-events: none;
+  position: absolute;
+  z-index: 30;
+  transform: rotate(180deg);
+  top: 15%;
+  width: 50px;
+}

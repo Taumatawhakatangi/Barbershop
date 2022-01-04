@@ -1,0 +1,15 @@
+.ie9 body {
+  background-color: green;
+}
+
+// медизапрос специально для IE. Данные стили применяются только для IE
+
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .btn {
+    max-width: 180px;
+  }
+  .feature__item {
+    height: 429px;
+    width: 330px;
+  }
+}

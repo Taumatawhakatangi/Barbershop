@@ -1,0 +1,84 @@
+// main: ../main.css
+
+.s-address {
+  padding: 100px 0 60px;
+  @media (max-width: 1200px) {
+    padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1200 - 320)));
+    padding-bottom: calc(35px + (60 - 35) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .title-wrapper {
+    margin-bottom: 150px;
+  }
+  & .section-title {
+    color: @color-2;
+  }
+  & .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 125px;
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: @color-2;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 120px;
+  &__link {
+    color: @color-2;
+  }
+  &__item {
+    max-width: 400px;
+    text-align: center;
+    width: 33%;
+    position: relative;
+    &:nth-child(1)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -70px;
+      left: 44%;
+      width: 50px;
+      height: 50px;
+      background: url(../img/icon/phone-r.svg) no-repeat center top / cover;
+      transition: all 0.4s ease;
+    }
+    &:nth-child(2)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -70px;
+      left: 44%;
+      width: 50px;
+      height: 50px;
+      background: url(../img/icon/mappin-r.svg) no-repeat center top / cover;
+      transition: all 0.4s ease;
+    }
+    &:nth-child(3)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -70px;
+      left: 44%;
+      width: 50px;
+      height: 50px;
+      background: url(../img/icon/clock-r.svg) no-repeat center top / cover;
+      transition: all 0.4s ease;
+    }
+    &:hover::before {
+      transform: scale(1.1);
+    }
+  }
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.map iframe {
+  width: 100%;
+}
