@@ -474,13 +474,13 @@ body.compensate-for-scrollbar {
   visibility: hidden;
 }
 .fancybox-container {
+  -webkit-backface-visibility: hidden;
   height: 100%;
   left: 0;
   outline: none;
   position: fixed;
   -webkit-tap-highlight-color: transparent;
   top: 0;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
   transform: translateZ(0);
   width: 100%;
@@ -617,6 +617,7 @@ body.compensate-for-scrollbar {
   vertical-align: middle;
 }
 .fancybox-slide--image .fancybox-content {
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
   animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
   background: transparent;
   background-repeat: no-repeat;
@@ -643,9 +644,11 @@ body.compensate-for-scrollbar {
 }
 .fancybox-can-pan .fancybox-content,
 .fancybox-can-swipe .fancybox-content {
+  cursor: -webkit-grab;
   cursor: grab;
 }
 .fancybox-is-grabbing .fancybox-content {
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 .fancybox-container [data-selectable="true"] {
@@ -878,6 +881,7 @@ body.compensate-for-scrollbar {
   text-decoration: underline;
 }
 .fancybox-loading {
+  -webkit-animation: a 1s linear infinite;
   animation: a 1s linear infinite;
   background: transparent;
   border: 4px solid #888;
@@ -892,6 +896,11 @@ body.compensate-for-scrollbar {
   top: 50%;
   width: 50px;
   z-index: 99999;
+}
+@-webkit-keyframes a {
+  to {
+    transform: rotate(1turn);
+  }
 }
 @keyframes a {
   to {
@@ -2783,7 +2792,7 @@ body.oveflow {
   .team__item.slick-slide {
     margin-right: 0;
   }
-  .team__item.slick-list.draggable {
+  .slick-list.draggable {
     padding-left: 0;
   }
 }
