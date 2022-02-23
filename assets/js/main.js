@@ -27,7 +27,7 @@ $( function () {
   // слайдеры
 
   $('.slider').slick({
-    prevArrow: '<button class="slider__btn-prev"><img src="assets/img/icon/bullit-down.png" alt="arrow"></button>',
+    prevArrow: '<button class="slider__btn-prev"><img src="assets/img/icon/bullit-left.png" alt="arrow"></button>',
     nextArrow:'<button class="slider__btn-next"><img src="assets/img/icon/bullit-up.png" alt="arrow"></button>' ,
     infinite: true,
     slidesToShow: 3,
@@ -51,7 +51,7 @@ $( function () {
   });
   
   $('.review').slick({
-    prevArrow: '<button class="slider__btn-prev"><img src="assets/img/icon/bullit-down.png" alt="arrow"></button>',
+    prevArrow: '<button class="slider__btn-prev"><img src="assets/img/icon/bullit-left.png" alt="arrow"></button>',
     nextArrow:'<button class="slider__btn-next"><img src="assets/img/icon/bullit-up.png" alt="arrow"></button>',
     responsive: [
       {
