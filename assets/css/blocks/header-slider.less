@@ -110,23 +110,23 @@
   top: 36vh;
   transition: all 0.4s ease;
   &:hover {
-    filter: brightness(2);
+    -webkit-filter: brightness(2);
+            filter: brightness(2);
   }
 }
 
 .slider__count {
   position: absolute;
   z-index: 19;
-  right: 18.4%;
+  right: 19.7%;
   top: 40vh;
   font-size: 25px;
   font-weight: 700;
   color: @color-4;
-  &::before {
-    content: "0/";
+  &::after {
+    content: "/3";
     position: absolute;
-    top: 0;
-    left: -31px;
+    top: 0; 
     color: @color-2;
   }
 }
